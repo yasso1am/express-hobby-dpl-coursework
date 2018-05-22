@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ./partials/header %>
+    </header>
+    <div class="container">
+      <% var url = "/gear/" + gear.id + "?_method=PUT" %>
+      <form method="POST" action=<%= url %> >
+        <input required name="item" value=<%= gear.item %> />
+        <input required name="description" value=<%= gear.description %> />
+        <input required name="weight" value=<%= gear.weight %> />
+        <input required name="price" value=<%= gear.price %> />
+        <a href="/gear" class="btn red">Cancel</a>
+        <button class="btn">Save</button>
+     </form>
+   </div>
+  </body>
+</html>
